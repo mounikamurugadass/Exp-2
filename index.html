@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 2</title>
+
+    <style>
+        #company {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            background: #555;
+            color: #f1f1f1;
+            width: 100%;
+        }
+
+        #company>* {
+            margin: 20px;
+        }
+
+        .nav {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .nav a.active {
+            color: black;
+        }
+
+        .nav>a {
+            margin: 10vw;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+
+        #main-content>* {
+            padding: 50px 10px 0 50px;
+        }
+
+
+        #signup-form {
+            text-align: center;
+        }
+
+        #signup-form form>input {
+            margin: 10px;
+
+        }
+
+        fieldset {
+            border: 1px solid #000;
+        }
+
+        legend {
+            padding: 0 20px 0 20px;
+        }
+
+        footer>* {
+            margin: 5vw;
+        }
+        .sticky-header {
+            background-color: #000;
+            color: #fff;
+            width:100%;
+            position: fixed; /*CSS property which makes nav sticky on top*/
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 10px;
+            text-align:left;
+            letter-spacing: 3px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="company">
+            <img src="./WildLife-logo-white.png" alt="Company Logo" width="200" height="200">
+            <h1>Wildlife</h1>
+        </div>
+
+        <div class="nav">
+            <a class="nav-item active" href="form.html">Form Link</a>
+            <a class="nav-item" href="https://www.youtube.com/embed/AhP5Tg_BLIk">YouTube Link</a>
+            <a class="nav-item" href="https://www.karunya.edu">Karunya Link</a>
+            <input type="text" placeholder="Search">
+        </div>
+    </header>
+
+    <br><br><br><br>
+    <section id="main-content" class="flex-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AhP5Tg_BLIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div>
+            <p>Discover amazing wildlife of Amazon! In this scenic film you will see the most incredible wild animals and birds that call the jungle home! These are some of them: Jaguar, Giant River Otter, Red Howler Monkey, Capybara, Black-capped Squirrel Monkey, Sloth, Macaw, Harpy Eagle, Toucan, Tamarin and many more. Sit back and relax while enjoying this scenic relaxation film captured on 4K ULTRA HD footage along with relaxing music.</p>
+            <audio controls autoplay
+                src="https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=Never+Gonna+Give+You+Up-+Original&filename=mz/Mzg1ODMxNTIzMzg1ODM3_JzthsfvUY24.MP3"></audio>
+        </div>
+    </section>
+
+    <footer class="flex-container">
+        <fieldset id="signup-form">
+            <legend>Sign up</legend>
+            <form action="#!">
+                <label for="name">*User name: </label>
+                <input type="text" id="name" name="name" placeholder="username" required>
+                <br>
+                <label for="password">*Password: </label>
+                <input type="password" id="password" name="password" placeholder="password" required>
+                <br>
+                <button type="submit">Register</button>
+            </form>
+        </fieldset>
+        <div id="contact-us">
+            <h3>Contact us</h3>
+            <p>Wildlife</p>
+            <p>D-210, Defence Colony,</p>
+            <p>New Delhi-110024</p>
+            <p>mail id: <a href="mailto:wildlife@company.org">wildlife@company.org</a></p>
+            <p>Phone no: <a href="tel:9812345678">(+91) (9812345678)</a></p>
+        </div>
+        <div id="location-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15765852.446572363!2d9.692803412199044!3d15.263155953703697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10e73978bd677361%3A0x3b60835bcec0809c!2sChad!5e0!3m2!1sen!2sin!4v1640607392843!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
+
+    <script>
+        const nav_items = Array.from(document.getElementsByClassName("nav-item"));
+
+        nav_items.forEach(nav => nav.addEventListener("click", e => e.target.classList.add("active")));
+    </script>
+</body>
+
+</html>
